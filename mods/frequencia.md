@@ -25,7 +25,7 @@ Segurar Shift ao clicar passa direto pro vanilla (por exemplo, pra encostar um h
 
 ## Configuração
 
-Arquivo `config/frequencia.json`, com live-reload. Aqui os campos são quase todos visuais — não existe capacidade ou cooldown pra ajustar, já que o inventário é um baú de 27 slots comum. Dá pra trocar o bloco usado no corpo do baú (por exemplo pra parecer um baú do ender de verdade), as cores do fecho que indicam público/trancado (ouro/diamante por padrão), e o tamanho da área de clique de cada lã, pra facilitar acertar uma cor específica.
+Arquivo `config/frequencia.json`, com live-reload. Aqui os campos são quase todos visuais — não existe capacidade ou cooldown pra ajustar, já que o inventário é um baú de 27 slots comum. Por padrão o corpo já usa a skin de baú do ender (batendo com o ingrediente da receita), mas dá pra trocar pra qualquer outro bloco, as cores do fecho que indicam público/trancado (ouro/diamante por padrão), e o tamanho da área de clique de cada lã, pra facilitar acertar uma cor específica.
 
 ## Dicas
 

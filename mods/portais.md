@@ -41,7 +41,7 @@ Modos disponíveis:
 
 | Modo | O que exige | Efeito |
 |---|---|---|
-| Presets curtos (10s / 5min / 1h, configurável) | Caneta normal | Gasta 1 uso, ativa pelo tempo escolhido |
+| Presets curtos (10s / 5min / 1h, configurável) | Caneta normal OU Caneta Avançada | Com caneta normal: gasta 1 uso. Com Caneta Avançada: não gasta nada. |
 | 24 horas | Caneta Avançada OU Caneta normal nova| Com caneta normal: consome-a INTEIRAMENTE de uma vez. Com Caneta Avançada: não gasta nada.|
 | Permanente | Caneta Avançada | Ativa **pra sempre** (sobrevive a reinício) — a caneta NÃO é consumida, dá pra reusar quantas vezes quiser |
 
@@ -61,7 +61,7 @@ Pra abrir o painel de um portal: agache e clique com o botão direito, com a mã
 - Se você gerencia esse portal, abre o painel completo.
 - Se não gerencia, só mostra uma info rápida (dono, público ou privado).
 
-No painel: lista paginada de jogadores por cabeça, clique esquerdo sobe o nível de acesso dele (sem acesso → usar → gerenciar → sem acesso de novo), clique direito remove o acesso na hora. Também dá pra alternar público/privado e ver quanto tempo falta pra ativação expirar (ou se é uma ligação permanente).
+No painel: lista paginada de jogadores por cabeça, clique esquerdo sobe o nível de acesso dele (sem acesso → usar → gerenciar → sem acesso de novo), clique direito remove o acesso na hora. Também dá pra alternar público/privado, renomear o portal (clique na etiqueta "Renomear portal" — abre uma placa pra você escrever o nome novo, igual à busca do Storage Manager) e ver quanto tempo falta pra ativação expirar (ou se é uma ligação permanente).
 
 Outra forma de dar acesso sem abrir o painel: o Selo de Permissão (veja comandos) — quem pegar o selo no inventário ganha USAR automaticamente e o selo se consome sozinho.
 
