@@ -2,16 +2,22 @@ import { defineConfig } from 'vitepress'
 import { withMermaid } from 'vitepress-plugin-mermaid'
 
 export default withMermaid(defineConfig({
-  title: 'Wiki Mokwa',
+  title: 'Wiki do Ant',
   description: 'Guia dos mods do servidor Mokwa (Minecraft Fabric 26.2, server-side)',
   lang: 'pt-BR',
   appearance: 'dark',
+  // repo de projeto (não é ant-redstone.github.io), então a URL real fica em /ant-wiki/, não na raiz --
+  // sem isso, todo asset (JS/CSS) e link interno resolveria contra a raiz do domínio e quebraria em produção
+  // mesmo com o preview local (que serve da raiz) funcionando perfeitamente.
+  base: '/ant-wiki/',
   // false (o padrão do VitePress) de propósito: GitHub Pages serve arquivo estático puro, sem reescrever
   // "/mods/portais" pra "/mods/portais.html" como Netlify/Vercel fazem -- com cleanUrls:true todo link
   // interno (sidebar, anterior/próximo) ficaria quebrado em produção. Com false, o VitePress já gera os
   // <a href> com ".html" nos arquivos publicados, então funciona em qualquer host estático simples.
   cleanUrls: false,
-  head: [['link', { rel: 'icon', href: '/favicon.svg' }]],
+  // raw <head> tags NÃO são prefixados com `base` automaticamente pelo VitePress (ao contrário de
+  // themeConfig.logo/links internos) -- precisa do caminho completo na mão.
+  head: [['link', { rel: 'icon', href: '/ant-wiki/favicon.svg' }]],
 
   themeConfig: {
     logo: '/favicon.svg',

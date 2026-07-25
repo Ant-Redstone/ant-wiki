@@ -1,10 +1,10 @@
 ---
 layout: home
-title: Wiki Mokwa
+title: Wiki do Ant
 description: Guia dos mods do servidor Mokwa
 
 hero:
-  name: Wiki Mokwa
+  name: Wiki do Ant
   text: Guia dos mods do servidor
   tagline: Tudo que os mods mudam no vanilla, como craftar, e como usar cada um — sem precisar instalar nada no seu cliente.
   actions:
