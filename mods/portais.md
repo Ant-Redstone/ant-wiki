@@ -42,7 +42,7 @@ Modos disponíveis:
 | Modo | O que exige | Efeito |
 |---|---|---|
 | Presets curtos (10s / 5min / 1h, configurável) | Caneta normal | Gasta 1 uso, ativa pelo tempo escolhido |
-| 24 horas | Caneta normal 100% cheia (nunca usada) | Gasta a caneta INTEIRA de uma vez, ativa por 24h |
+| 24 horas | Caneta Avançada OU Caneta normal nova| Com caneta normal: consome-a INTEIRAMENTE de uma vez. Com Caneta Avançada: não gasta nada.|
 | Permanente | Caneta Avançada | Ativa **pra sempre** (sobrevive a reinício) — a caneta NÃO é consumida, dá pra reusar quantas vezes quiser |
 
 A lista de destino só mostra portais que você já tem acesso — não dá pra usar essa tela pra descobrir portal alheio que você não tem permissão nenhuma.
