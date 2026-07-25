@@ -61,7 +61,7 @@ Pra abrir o painel de um portal: agache e clique com o botão direito, com a mã
 - Se você gerencia esse portal, abre o painel completo.
 - Se não gerencia, só mostra uma info rápida (dono, público ou privado).
 
-No painel: lista paginada de jogadores por cabeça, clique esquerdo sobe o nível de acesso dele (sem acesso → usar → gerenciar → sem acesso de novo), clique direito remove o acesso na hora. Também dá pra alternar público/privado, renomear o portal (clique na etiqueta "Renomear portal" — abre uma placa pra você escrever o nome novo, igual à busca do Storage Manager) e ver quanto tempo falta pra ativação expirar (ou se é uma ligação permanente).
+No painel: lista paginada de jogadores por cabeça, clique esquerdo sobe o nível de acesso dele (sem acesso → usar → gerenciar → sem acesso de novo), clique direito remove o acesso na hora. Também dá pra alternar público/privado, renomear o portal (clique na etiqueta "Renomear portal" — abre uma placa pra você escrever o nome novo, igual à busca do Storage Manager), trocar a cor da superfície SÓ deste portal (clique no couro tingido "Cor da superfície" e escreva um hex de 6 ou 8 dígitos — vazio volta pra cor padrão do servidor) e ver quanto tempo falta pra ativação expirar (ou se é uma ligação permanente).
 
 Outra forma de dar acesso sem abrir o painel: o Selo de Permissão (veja comandos) — quem pegar o selo no inventário ganha USAR automaticamente e o selo se consome sozinho.
 
@@ -84,7 +84,7 @@ Pra forjar: largue no chão uma Caneta Mágica de Ametista normal (não precisa 
 
 ## Configuração
 
-Os admins ajustam ao vivo, sem rebuild: tamanho máximo do retângulo de obsidiana (padrão 23 blocos de lado), quantos portais cada jogador pode ter (padrão 8), a lista de durações curtas do painel de ativação (padrão 10s / 5min / 1h), a duração da opção de queimar a caneta cheia (padrão 24h) e usos padrão de uma caneta nova (12). O nível mínimo de pirâmide do farol pra forjar a caneta avançada também é configurável (padrão 1). A cor da superfície do portal ativo também é configurável (`superficieCorARGB`, um hex ARGB).
+Os admins ajustam ao vivo, sem rebuild: tamanho máximo do retângulo de obsidiana (padrão 23 blocos de lado), quantos portais cada jogador pode ter (padrão 8), a lista de durações curtas do painel de ativação (padrão 10s / 5min / 1h), a duração da opção de queimar a caneta cheia (padrão 24h) e usos padrão de uma caneta nova (12). O nível mínimo de pirâmide do farol pra forjar a caneta avançada também é configurável (padrão 1). A cor PADRÃO da superfície (pra portais sem cor própria) também é configurável (`superficieCorARGB`, um hex ARGB) — pra mudar a cor de UM portal específico, use o botão "Cor da superfície" no painel dele (veja Permissões).
 
 ## Dicas
 
