@@ -47,7 +47,7 @@ Modos disponíveis:
 
 A lista de destino só mostra portais que você já tem acesso — não dá pra usar essa tela pra descobrir portal alheio que você não tem permissão nenhuma.
 
-Com o portal ativo, basta caminhar até a superfície dele e ficar parado encostado por cerca de 1 segundo — é o teleporte acontecendo, não precisa "atravessar" feito o portal do Nether.
+Com o portal ativo, basta caminhar até a superfície dele e ficar parado encostado por cerca de 1 segundo — é o teleporte acontecendo, não precisa "atravessar" feito o portal do Nether. Assim como o portal do Nether vanilla, depois de teleportar você precisa se afastar da superfície antes de poder ser puxado de novo — ficar parado em cima dela não fica te teleportando toda hora.
 
 **Rede de segurança:** se o portal do outro lado não está ativo de volta pra você, ele ainda funciona como caminho de volta automaticamente — ninguém fica preso do outro lado só porque esqueceram de ativar o retorno. Esse caminho de volta ignora completamente a permissão normal do portal (é sempre livre), de propósito: quem já foi deixado entrar não devia achar a porta dos fundos trancada.
 
@@ -84,7 +84,7 @@ Pra forjar: largue no chão uma Caneta Mágica de Ametista normal (não precisa 
 
 ## Configuração
 
-Os admins ajustam ao vivo, sem rebuild: tamanho máximo do retângulo de obsidiana (padrão 23 blocos de lado), quantos portais cada jogador pode ter (padrão 8), a lista de durações curtas do painel de ativação (padrão 10s / 5min / 1h), a duração da opção de queimar a caneta cheia (padrão 24h) e usos padrão de uma caneta nova (12). O nível mínimo de pirâmide do farol pra forjar a caneta avançada também é configurável (padrão 1).
+Os admins ajustam ao vivo, sem rebuild: tamanho máximo do retângulo de obsidiana (padrão 23 blocos de lado), quantos portais cada jogador pode ter (padrão 8), a lista de durações curtas do painel de ativação (padrão 10s / 5min / 1h), a duração da opção de queimar a caneta cheia (padrão 24h) e usos padrão de uma caneta nova (12). O nível mínimo de pirâmide do farol pra forjar a caneta avançada também é configurável (padrão 1). A cor da superfície do portal ativo também é configurável (`superficieCorARGB`, um hex ARGB).
 
 ## Dicas
 
