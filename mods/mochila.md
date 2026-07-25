@@ -31,7 +31,7 @@ Trocar aparência: mesa de ferraria, mochila (base) + qualquer cabeça de jogado
 
 Diferente da mochila, a bolsa **pode ser colocada no chão ou na parede** como uma cabeça de verdade — clique direito num bloco planta ela (segurando + agachado abre o menu na mão em vez de plantar). Clicar numa bolsa já plantada abre o mesmo menu de qualquer lugar; quebrar dropa ela com o conteúdo intacto. Se o mod storage-manager estiver instalado, uma bolsa plantada entra sozinha na rede de canos dele.
 
-**Bolsa Tripla** — três bolsas independentes dentro de um item só, abrindo num menu único (uma linha por bolsa: inserir, ver quantidade/retirar, Auto-Pickup próprio). Upgrade de tier na mesa de ferraria só sobe a PRIMEIRA linha ainda não maximizada por vez — as outras duas ficam como estão. Também dá pra trocar a aparência dela (mesa de ferraria + cabeça de jogador) e colocá-la no chão igual a uma Bolsa normal, com as três linhas preservadas.
+**Bolsa Tripla** — três bolsas independentes dentro de um item só, abrindo num menu único (uma linha por bolsa: inserir, ver quantidade/retirar, Auto-Pickup próprio). Upgrade de tier na mesa de ferraria sobe QUALQUER linha, independente das outras — o material usado (cobre/ferro/ouro/esmeralda/diamante/netherite) decide sozinho qual linha melhora, de acordo com o tier atual dela; não precisa maximizar uma linha antes de mexer nas outras. Também dá pra trocar a aparência dela (mesa de ferraria + cabeça de jogador) e colocá-la no chão igual a uma Bolsa normal, com as três linhas preservadas.
 
 **Cooler** — clique direito abre 5 slots: os 3 primeiros só aceitam comida de verdade, o 4º é decorativo, e o 5º cicla o modo de Auto-Eat a cada clique:
 
