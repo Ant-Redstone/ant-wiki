@@ -23,8 +23,8 @@ Dois itens, os dois na bancada de crafting normal:
 
 ## Construindo um portal
 
-1. Construa um retângulo sólido e chapado de obsidiana chorona — qualquer tamanho, de 1x1 até um limite de sanidade configurado pelos admins (padrão 23 blocos de lado). Pode ser bem menor que um portal de Nether comum. Não pode ter buracos, e não pode ser um formato torto (L, blob) — só retângulo reto.
-2. Clique com o botão direito em qualquer bloco desse retângulo segurando o Núcleo de Portal. Isso consagra o portal (consome o Núcleo) e dá um número/id pra ele.
+1. Construa uma moldura de obsidiana chorona igual a de um portal do Nether de verdade: a borda inteira (cantos inclusos) precisa ser obsidiana chorona, e o miolo que ela cerca precisa estar vazio — é por ali que você atravessa. Qualquer tamanho, de uma lasca sólida (1x1, sem miolo nenhum pra ter) até um limite de sanidade configurado pelos admins (padrão 23 blocos de lado); pode ser bem menor que um portal de Nether comum. A borda não pode ter falhas, o miolo não pode ter nada bloqueando (nem uma mistura de vazio com obsidiana), e o formato não pode ser torto (L, blob) — só retângulo reto.
+2. Clique com o botão direito em qualquer bloco da moldura segurando o Núcleo de Portal. Isso consagra o portal (consome o Núcleo) e dá um número/id pra ele.
 3. Um jogador pode ter no máximo um número limitado de portais ao mesmo tempo (padrão 8).
 
 Quebrar a obsidiana de um portal (só o dono ou quem gerencia pode) desfaz o portal e devolve um Núcleo novinho pra quem quebrou — o material não se perde, só o trabalho de ativação.
@@ -47,7 +47,7 @@ Modos disponíveis:
 
 A lista de destino só mostra portais que você já tem acesso — não dá pra usar essa tela pra descobrir portal alheio que você não tem permissão nenhuma.
 
-Com o portal ativo, basta caminhar até a superfície dele e ficar parado encostado por cerca de 1 segundo — é o teleporte acontecendo, não precisa "atravessar" feito o portal do Nether. Assim como o portal do Nether vanilla, depois de teleportar você precisa se afastar da superfície antes de poder ser puxado de novo — ficar parado em cima dela não fica te teleportando toda hora.
+Com o portal ativo, basta entrar no vão da moldura (igual um portal do Nether) e ficar parado ali por cerca de 1 segundo — é o teleporte acontecendo. Assim como o portal do Nether vanilla, depois de teleportar você precisa sair do vão antes de poder ser puxado de novo — ficar parado dentro dele não fica te teleportando toda hora.
 
 **Rede de segurança:** se o portal do outro lado não está ativo de volta pra você, ele ainda funciona como caminho de volta automaticamente — ninguém fica preso do outro lado só porque esqueceram de ativar o retorno. Esse caminho de volta ignora completamente a permissão normal do portal (é sempre livre), de propósito: quem já foi deixado entrar não devia achar a porta dos fundos trancada.
 
