@@ -29,6 +29,8 @@ Além da bancada, o encoder tem o **modo Processamento** pra receitas de fornalh
 
 Se um item aparecer como faltando **ele mesmo** na lista ("não dá pra craftar 64× X — falta: 64× X"), isso quer dizer que nenhum padrão da rede produz esse item: ou não existe padrão codificado pra ele, ou o Auto-Crafter que o guarda não está encostado na rede.
 
+O diálogo de pedido também tem um botão **"Craft max"**: em vez de digitar uma quantidade, ele descobre sozinho a maior quantidade que a rede consegue produzir agora com o material que existe, e enfileira exatamente isso — útil quando você só quer "o máximo possível" sem calcular na mão.
+
 **Dono e acesso** — a primeira pessoa a rodar `/sm_dono` olhando pra uma prateleira vira dona dela; sem dono, qualquer um usa normalmente. Só o dono (ou um operador com a tag de bypass) consegue tornar a prateleira pública, confiar acesso a um jogador específico, ou revogar esse acesso depois.
 
 **Acesso remoto** — um Controle Remoto (mesa de ferraria: baú do ender + estrela do nether) abre, de qualquer lugar e dimensão, a rede em que foi configurado. Pra configurar: abra qualquer Storage Manager segurando um Olho Emaranhado (mesa de ferraria: olho do ender + estrela do nether) — isso aponta o olho pra aquela rede — depois funda o olho já configurado no controle (mesa de ferraria: controle + olho) pra gravar o destino nele de vez.
@@ -39,6 +41,7 @@ Se um item aparecer como faltando **ele mesmo** na lista ("não dá pra craftar 
 |---|---|
 | `/sm_search [texto]` | Reabre a última prateleira que você viu, filtrada pelo texto (vazio = mostra tudo) |
 | `/sm_craft <quantidade>` | Enfileira um autocraft pro item selecionado no diálogo de pedido |
+| `/sm_craft_max` | Enfileira a maior quantidade craftável agora do item selecionado (o botão "Craft max" do diálogo) |
 | `/sm_keep <quantidade>` | Mantém (ou cancela, com 0) manutenção automática de estoque pro item selecionado |
 | `/sm_jobs` | Mostra quantos jobs de autocraft estão ativos |
 | `/sm_dono` | Reivindica a prateleira que você está olhando (ou mostra quem já é dono) |
