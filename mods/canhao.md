@@ -26,10 +26,24 @@ de smithing nem template). Alternativa: comando `/canhao dar` (operador) entrega
 5. Clique direito no canhão (sem item na mão) abre a UI de controle: barra de progresso, estoque de pólvora,
    modo de substituição (não sobrescrever / substituir diferente / forçar tudo), iniciar/pausar/cancelar,
    liga/desliga do preview, lista de materiais e ejetar Projeto.
-6. O canhão constrói sozinho, retirando material da rede de containers ao redor (inclusive por correntes, no
-   padrão do Storage Manager). Se faltar algum material, ele constrói o que der e retoma sozinho quando o
-   material voltar — nunca trava a obra inteira por um item faltando. Quebrar o canhão em obra cancela o job e
-   devolve o item do canhão + o Projeto carregado.
+6. O canhão constrói sozinho, retirando material da rede de containers ao redor. Se faltar algum material, ele
+   constrói o que der e retoma sozinho quando o material voltar — nunca trava a obra inteira por um item
+   faltando. Quebrar o canhão em obra cancela o job e devolve o item do canhão + o Projeto carregado.
+
+## A rede de materiais
+
+O canhão puxa material de qualquer container encostado nele, e de tudo que aquela rede alcança — é a **mesma
+rede do Storage Manager**, não uma rede paralela. Com o Storage Manager instalado, o canhão enxerga tudo que
+ele enxerga:
+
+- baús, barris, shulkers e afins;
+- **correntes** ligando containers, inclusive **corrente camuflada**;
+- **Bolsa** e **Bolsa Tripla** colocadas (do mod Mochila);
+- **canos** (pipes) da rede.
+
+Ou seja: material guardado numa bolsa da rede conta pro canhão, e uma rede ligada por corrente camuflada não
+aparece "partida" no meio. Sem o Storage Manager instalado, o canhão cai no reconhecimento por tipo de bloco
+(baú/barril/corrente comum), que é o comportamento antigo.
 
 ## Comandos
 | Comando | Permissão | O que faz |
@@ -57,7 +71,10 @@ O martelinho guarda a dimensão do canhão vinculado e a da seleção separadame
 
 - **Dá pra comandar um canhão de outra dimensão.** Vinculou um canhão no Overworld? `/cencher`, `/ccolar` e `/ccancelar` funcionam nele mesmo que você esteja no Nether.
 - **Copiar e colar atravessa dimensão.** Copie uma construção no Overworld, vá pro Nether (com o martelinho vinculado a um canhão de lá) e cole — o que a cópia guarda são os blocos, que não pertencem a mundo nenhum.
-- **Preencher, não.** `/cencher` exige que a seleção e o canhão estejam na mesma dimensão, porque o canhão coloca bloco no mundo dele. Pra levar algo de um mundo pro outro, use copiar/colar.
+- **Preencher também atravessa dimensão.** Um canhão no Overworld enche uma região do Nether puxando material da rede dele mesmo — os blocos entram no mundo da *seleção*, o material sai do mundo do *canhão*, e você pode estar num terceiro lugar. Não precisa mais montar canhão e estoque em cada mundo.
+- A área de destino precisa estar **carregada**. Se não estiver, o comando avisa qual dimensão está descarregada em vez de começar e falhar no meio — leve alguém até lá, ou force a chunk.
+- Num preenchimento entre mundos a **animação de tiro não aparece** (o cano não mira e não sai projétil): não existe trajetória de um canhão no Overworld até um bloco no Nether. Os blocos entram do mesmo jeito.
+- Copiar/colar continua sendo o caminho pra levar uma construção **que já existe** de um mundo pro outro; `encher` é pra criar volume novo.
 - Marcar um canto numa dimensão diferente da seleção atual **descarta o outro canto** — região com cantos em mundos diferentes não existe.
 - Os marcadores vermelho/azul e o contorno só aparecem na dimensão da própria seleção (as coordenadas se repetem em todo mundo, então desenhar fora dela só confundiria).
 - Martelinho vinculado antes dessa mudança continua funcionando como antes (assume a dimensão onde você está) — não precisa revincular.

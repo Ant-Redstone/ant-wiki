@@ -51,7 +51,7 @@ página do mod).
 - [AFK](/mods/afk) — marca quem está ausente.
 - [Patentes](/mods/patentes) — títulos/patentes de jogador.
 - [Nuke](/mods/nuke) — dispositivo de demolição controlada.
-- [AntTweaks](/mods/anttweaks) — miudezas que não mereciam um mod próprio.
+- [AntTweaks](/mods/anttweaks) — miudezas: tingir em lote e a Pérola Dourada, que segura os monstros da sua farm.
 
 ## Pra administradores
 - [Config Reload](/mods/configreload) — recarrega configs de todos os mods sem reiniciar o servidor.
