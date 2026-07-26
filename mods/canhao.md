@@ -40,7 +40,27 @@ de smithing nem template). Alternativa: comando `/canhao dar` (operador) entrega
 | `/canhao apagar <id-ou-prefixo>` | operador | Apaga um Projeto salvo. Aceita id completo ou prefixo. |
 | `/canhao debugparse <caminho>` | operador (uso de depuração) | Analisa um arquivo de schematic por caminho e imprime um resumo no console — útil pra conferir um arquivo antes de importar. |
 
+Comandos do Martelinho Dourado (todos precisam do martelinho na mão), cada um com atalho curto em português e inglês:
+
+| Comando | Atalhos | O que faz |
+|---|---|---|
+| `/canhao encher <bloco>` | `/cencher` · `/cfill` | Preenche a região selecionada com o bloco escolhido, usando o canhão vinculado. |
+| `/canhao copiar` | `/ccopiar` · `/ccopy` | Copia a região selecionada e entra no modo de posicionamento (clique esquerdo reposiciona, direito rotaciona). |
+| `/canhao colar` | `/ccolar` · `/cpaste` | Cola a cópia pendente na âncora atual e começa a imprimir. |
+| `/canhao cancelar` | `/ccancelar` · `/ccancel` | Para o trabalho do canhão vinculado, esvazia ele e descarta a cópia pendente. Não precisa ser operador — só age no canhão que o *seu* martelinho vinculou, e nunca apaga um Projeto salvo da biblioteca. |
+
 \* a menos que a config restrinja `/canhao carregar` a operadores.
+
+## Entre dimensões
+
+O martelinho guarda a dimensão do canhão vinculado e a da seleção separadamente, então:
+
+- **Dá pra comandar um canhão de outra dimensão.** Vinculou um canhão no Overworld? `/cencher`, `/ccolar` e `/ccancelar` funcionam nele mesmo que você esteja no Nether.
+- **Copiar e colar atravessa dimensão.** Copie uma construção no Overworld, vá pro Nether (com o martelinho vinculado a um canhão de lá) e cole — o que a cópia guarda são os blocos, que não pertencem a mundo nenhum.
+- **Preencher, não.** `/cencher` exige que a seleção e o canhão estejam na mesma dimensão, porque o canhão coloca bloco no mundo dele. Pra levar algo de um mundo pro outro, use copiar/colar.
+- Marcar um canto numa dimensão diferente da seleção atual **descarta o outro canto** — região com cantos em mundos diferentes não existe.
+- Os marcadores vermelho/azul e o contorno só aparecem na dimensão da própria seleção (as coordenadas se repetem em todo mundo, então desenhar fora dela só confundiria).
+- Martelinho vinculado antes dessa mudança continua funcionando como antes (assume a dimensão onde você está) — não precisa revincular.
 
 ## Configuração
 Arquivo `config/canhao.json`, recarregável a quente via `configreload`. Os números que mais afetam o dia a
