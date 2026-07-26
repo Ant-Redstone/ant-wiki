@@ -122,21 +122,24 @@ export default withMermaid(defineConfig({
     darkModeSwitchLabel: 'Tema',
   },
 
+  // Paleta do Painel de Redstone (DESIGN.md) — obsidiana + redstone como único acento, cobre oxidado
+  // reservado pra um cluster secundário. Antes disso o mermaid usava um azul-aço sem relação nenhuma
+  // com o resto do site; agora um diagrama usa exatamente as mesmas cores que qualquer outra página.
   mermaid: {
     theme: 'dark',
     themeVariables: {
-      primaryColor: '#1e3a5f',
-      primaryTextColor: '#e0e0e0',
-      primaryBorderColor: '#4a9eed',
-      lineColor: '#4a9eed',
-      secondaryColor: '#2d4a3e',
-      tertiaryColor: '#2d2d3d',
-      background: '#1a1a2e',
-      mainBkg: '#1e3a5f',
-      nodeBorder: '#4a9eed',
-      clusterBkg: '#16213e',
-      titleColor: '#e0e0e0',
-      edgeLabelBackground: '#1a1a2e',
+      primaryColor: '#1f1d29',
+      primaryTextColor: '#e3e4eb',
+      primaryBorderColor: '#f53e39',
+      lineColor: '#f53e39',
+      secondaryColor: '#0f342c',
+      tertiaryColor: '#292733',
+      background: '#0b0a12',
+      mainBkg: '#1f1d29',
+      nodeBorder: '#f53e39',
+      clusterBkg: '#14121c',
+      titleColor: '#e3e4eb',
+      edgeLabelBackground: '#0b0a12',
     },
   },
 }))

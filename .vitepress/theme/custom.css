@@ -1,29 +1,189 @@
+/**
+ * O Painel de Redstone — ver DESIGN.md pra a lógica completa (paleta, contraste, regras).
+ * Duas famílias de neutro no MESMO matiz (~293°, obsidiana/pedra): claro e escuro são o mesmo
+ * material sob luz oposta, não duas paletas diferentes. Redstone é o único acento vivo; cobre
+ * oxidado é raro e só pra diferenciação semântica (nunca decorativo).
+ */
+
 :root {
-  --vp-c-brand-1: #7c5cff;
-  --vp-c-brand-2: #6a4ce0;
-  --vp-c-brand-3: #5638c2;
-  --vp-c-brand-soft: rgba(124, 92, 255, 0.16);
+  /* ---- Obsidiana (tema escuro) ---- */
+  --ant-obsidian-void: #0b0a12;
+  --ant-obsidian-soft: #14121c;
+  --ant-obsidian-raised: #1f1d29;
+  --ant-obsidian-seam: #292733;
+  --ant-obsidian-line: #33313f;
+  --ant-ash-bright: #e3e4eb;
+  --ant-ash-muted: #9c9dab;
+  --ant-ash-faint: #7d7f8c;
+
+  /* ---- Pedra (tema claro) ---- */
+  --ant-stone-white: #f7f6fb;
+  --ant-stone-soft: #ebeaf1;
+  --ant-stone-seam: #d7d6de;
+  --ant-stone-line: #c4c3cd;
+  --ant-ink-bright: #1d1b26;
+  --ant-ink-muted: #53505f;
+  --ant-ink-faint: #636171;
+
+  /* ---- Redstone (acento único) ---- */
+  --ant-redstone: #f53e39;
+  --ant-redstone-bright: #ff7459;
+  --ant-redstone-deep: #b7191c;
+  --ant-redstone-ink: #b30018;
+  --ant-redstone-link: #a2001b;
+  --ant-redstone-deep-ink: #860012;
+
+  /* ---- Cobre oxidado (acento raro) ---- */
+  --ant-copper: #5bb19b;
+  --ant-copper-deep: #026e5b;
+  --ant-copper-ink: #005c4a;
+  --ant-copper-ink-deep: #1b7a66;
+
+  /* Display/label mono — só fontes de sistema, zero fonte nova pra carregar */
+  --ant-font-mono: 'JetBrains Mono', ui-monospace, 'Cascadia Code', 'SF Mono', Consolas, monospace;
+
+  /* Tema claro (padrão do :root) */
+  --vp-c-brand-1: var(--ant-redstone-ink);
+  --vp-c-brand-2: var(--ant-redstone-link);
+  --vp-c-brand-3: var(--ant-redstone-deep-ink);
+  --vp-c-brand-soft: color-mix(in oklch, var(--ant-redstone-ink) 14%, transparent);
+
+  --vp-c-bg: var(--ant-stone-white);
+  --vp-c-bg-alt: var(--ant-stone-soft);
+  --vp-c-bg-soft: var(--ant-stone-soft);
+  --vp-c-bg-elv: #ffffff;
+  --vp-c-border: var(--ant-stone-line);
+  --vp-c-divider: var(--ant-stone-seam);
+  --vp-c-gutter: var(--ant-stone-seam);
+  --vp-c-text-1: var(--ant-ink-bright);
+  --vp-c-text-2: var(--ant-ink-muted);
+  --vp-c-text-3: var(--ant-ink-faint);
 }
 
 .dark {
-  --vp-c-bg: #14141c;
-  --vp-c-bg-soft: #1b1b26;
-  --vp-c-bg-alt: #101017;
+  --vp-c-brand-1: var(--ant-redstone);
+  --vp-c-brand-2: var(--ant-redstone-bright);
+  --vp-c-brand-3: var(--ant-redstone-deep);
+  --vp-c-brand-soft: color-mix(in oklch, var(--ant-redstone) 16%, transparent);
+
+  --vp-c-bg: var(--ant-obsidian-void);
+  --vp-c-bg-alt: var(--ant-obsidian-soft);
+  --vp-c-bg-soft: var(--ant-obsidian-soft);
+  --vp-c-bg-elv: var(--ant-obsidian-raised);
+  --vp-c-border: var(--ant-obsidian-line);
+  --vp-c-divider: var(--ant-obsidian-seam);
+  --vp-c-gutter: #000000;
+  --vp-c-text-1: var(--ant-ash-bright);
+  --vp-c-text-2: var(--ant-ash-muted);
+  --vp-c-text-3: var(--ant-ash-faint);
 }
 
-/* Mermaid dark-mode overrides (layer 2 of 3 -- see theme/index.ts for layer 3) */
+/* ---------------------------------------------------------------- Tipografia */
+
+/* A Regra do Mono Só no Topo (DESIGN.md §3): título de página, hero, rótulos — nunca corpo de parágrafo. */
+.vp-doc h1,
+.VPHero .name,
+.VPHero .text,
+.vp-doc h2 {
+  font-family: var(--ant-font-mono);
+  letter-spacing: -0.01em;
+}
+.vp-doc h1 { font-weight: 700; }
+.vp-doc h2 { font-weight: 700; font-size: 1.5rem; letter-spacing: -0.005em; }
+
+.VPNavBarTitle .title {
+  font-family: var(--ant-font-mono);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.VPSidebarItem.level-0 > .item > .text {
+  font-family: var(--ant-font-mono);
+  font-weight: 600;
+  font-size: 0.8125rem;
+  letter-spacing: 0.01em;
+}
+
+/* ---------------------------------------------------------------- Botões: 6px, nunca pílula */
+
+.VPButton {
+  border-radius: 6px !important;
+  font-family: var(--ant-font-mono);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  transition: background-color 150ms cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 150ms cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.VPButton.brand {
+  background-color: var(--vp-c-brand-3);
+}
+.VPButton.brand:hover {
+  background-color: var(--vp-c-brand-1);
+}
+.VPButton.brand:focus-visible,
+.VPButton.alt:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px color-mix(in oklch, var(--vp-c-brand-1) 35%, transparent);
+}
+.VPButton.alt:hover {
+  border-color: var(--vp-c-brand-1);
+}
+
+/* ---------------------------------------------------------------- Navegação: aceso, não sublinhado/faixa */
+
+/* !important needed: VitePress's own scoped component styles set .text's color and can land later in the
+   cascade than this stylesheet despite equal selector specificity, so a plain override is unreliable. */
+.VPSidebarItem.is-active > .item .text,
+.VPSidebarItem.is-active > .item .indicator {
+  color: var(--vp-c-brand-1) !important;
+  font-family: var(--ant-font-mono) !important;
+  font-weight: 600 !important;
+}
+.VPNavBarMenuLink.active {
+  color: var(--vp-c-brand-1);
+}
+
+/* Foco visível em qualquer elemento interativo — WCAG AA, sem exceção (PRODUCT.md §Acessibilidade) */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+.VPSidebarItem .item:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px color-mix(in oklch, var(--vp-c-brand-1) 35%, transparent);
+  border-radius: 4px;
+}
+
+/* ---------------------------------------------------------------- Tabelas — o componente mais repetido */
+
+.vp-doc table { display: table; width: 100%; }
+.vp-doc th {
+  font-family: var(--ant-font-mono);
+  font-weight: 600;
+  font-size: 0.8125rem;
+  letter-spacing: 0.01em;
+}
+
+/* Código inline: cor de acento sobre fundo levemente tingido — nunca faixa lateral */
+.vp-doc :not(pre) > code {
+  color: var(--vp-c-brand-1);
+  background-color: color-mix(in oklch, var(--vp-c-brand-1) 12%, transparent);
+}
+
+/* ---------------------------------------------------------------- Mermaid (layer 2 de 3 -- layer 3 em theme/index.ts) */
 .mermaid .node rect,
 .mermaid .node circle,
 .mermaid .node polygon {
-  fill: #1e3a5f !important;
-  stroke: #4a9eed !important;
+  fill: var(--ant-obsidian-raised) !important;
+  stroke: var(--ant-redstone) !important;
 }
 .mermaid .edgeLabel {
-  background-color: #1a1a2e !important;
-  color: #e0e0e0 !important;
+  background-color: var(--ant-obsidian-void) !important;
+  color: var(--ant-ash-bright) !important;
 }
-.mermaid text { fill: #e0e0e0 !important; }
-.mermaid .label { color: #e0e0e0 !important; }
+.mermaid text { fill: var(--ant-ash-bright) !important; }
+.mermaid .label { color: var(--ant-ash-bright) !important; }
 
 .mermaid-zoom-modal {
   position: fixed;
@@ -37,5 +197,10 @@
 }
 .mermaid-zoom-modal .mermaid { transform: scale(1.5); }
 
-/* A little more breathing room for mod pages with lots of tables */
-.vp-doc table { display: table; width: 100%; }
+@media (prefers-reduced-motion: reduce) {
+  .VPButton,
+  a:focus-visible,
+  button:focus-visible {
+    transition: none !important;
+  }
+}

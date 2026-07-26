@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-26T00:00:00.000Z",
+  "title": "Design System: Wiki do Ant",
+  "extensions": {
+    "colorMeta": {
+      "obsidian-void": { "role": "neutral", "displayName": "Obsidiana Vazio", "canonical": "oklch(15% 0.018 293)", "tonalRamp": ["#06050c", "#1b1923", "#33313c", "#555360", "#7a7885", "#9e9caa", "#c7c5d4", "#efecfb"] },
+      "redstone": { "role": "primary", "displayName": "Redstone", "canonical": "oklch(64% 0.22 27)", "tonalRamp": ["#3d0000", "#600000", "#820000", "#a50008", "#c9302d", "#e95048", "#ff7266", "#ff9688"] },
+      "copper": { "role": "secondary", "displayName": "Cobre Oxidado", "canonical": "oklch(70% 0.09 175)", "tonalRamp": ["#001409", "#002d1f", "#004738", "#0f6353", "#36816f", "#559f8c", "#75bfab", "#9ee9d4"] },
+      "stone-white": { "role": "neutral", "displayName": "Pedra Branca", "canonical": "oklch(97.5% 0.006 293)" },
+      "redstone-ink": { "role": "primary", "displayName": "Redstone (tinta, tema claro)", "canonical": "oklch(48% 0.20 25)" }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Nome do herói na home; título H1 de cada página de mod." },
+      "headline": { "displayName": "Headline", "purpose": "H2 de seção dentro de uma página." },
+      "body": { "displayName": "Body", "purpose": "Todo o corpo de texto, tabelas, listas — nunca mono." },
+      "label": { "displayName": "Label", "purpose": "Texto de botão, badge, legenda de tabela." }
+    },
+    "shadows": [
+      { "name": "redstone-glow", "value": "0 0 0 3px color-mix(in oklch, var(--vp-c-brand-1) 35%, transparent)", "purpose": "Anel de foco/hover em botão primário, link ativo, campo em foco — a única sombra colorida do sistema." }
+    ],
+    "motion": [
+      { "name": "ease-standard", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Transição padrão de hover/foco — ease-out-quint, sem bounce." },
+      { "name": "duration-fast", "value": "150ms", "purpose": "Hover, foco, troca de cor." }
+    ],
+    "breakpoints": [
+      { "name": "sidebar-collapse", "value": "960px" },
+      { "name": "mobile", "value": "640px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Ação principal — 'Começar por aqui' na home, confirmações de formulário.",
+      "html": "<button class=\"ds-btn-primary\">Começar por aqui</button>",
+      "css": ".ds-btn-primary { background: #b7191c; color: #ffffff; padding: 11px 22px; border: none; border-radius: 6px; font-family: 'JetBrains Mono', ui-monospace, 'Cascadia Code', 'SF Mono', Consolas, monospace; font-weight: 600; font-size: 0.9rem; letter-spacing: 0.01em; cursor: pointer; transition: background 150ms cubic-bezier(0.16,1,0.3,1), box-shadow 150ms cubic-bezier(0.16,1,0.3,1); } .ds-btn-primary:hover { background: #f53e39; } .ds-btn-primary:focus-visible { outline: none; box-shadow: 0 0 0 3px rgba(245,62,57,0.35); }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Ação alternativa — 'Ver todos os mods' na home.",
+      "html": "<button class=\"ds-btn-secondary\">Ver todos os mods</button>",
+      "css": ".ds-btn-secondary { background: transparent; color: #e3e4eb; padding: 11px 22px; border: 1px solid #33313f; border-radius: 6px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-weight: 600; font-size: 0.9rem; cursor: pointer; transition: background 150ms cubic-bezier(0.16,1,0.3,1), border-color 150ms cubic-bezier(0.16,1,0.3,1); } .ds-btn-secondary:hover { background: #1f1d29; border-color: #f53e39; } .ds-btn-secondary:focus-visible { outline: none; box-shadow: 0 0 0 3px rgba(245,62,57,0.35); }"
+    },
+    {
+      "name": "Sidebar Nav Link",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Item de navegação lateral — repouso, hover e ativo.",
+      "html": "<a href=\"#\" class=\"ds-nav-link ds-nav-link--active\">Storage Manager</a>",
+      "css": ".ds-nav-link { display: block; padding: 6px 12px; color: #9c9dab; font-size: 0.9rem; text-decoration: none; border-radius: 4px; transition: color 150ms cubic-bezier(0.16,1,0.3,1); } .ds-nav-link:hover { color: #e3e4eb; background: #1f1d29; } .ds-nav-link--active { color: #f53e39; font-family: 'JetBrains Mono', ui-monospace, monospace; font-weight: 600; }"
+    },
+    {
+      "name": "Table Header",
+      "kind": "custom",
+      "refersTo": "table-header",
+      "description": "Cabeçalho de tabela de comandos/config — o componente mais repetido nas 31+ páginas de mod.",
+      "html": "<table class=\"ds-table\"><thead><tr><th>Comando</th><th>O que faz</th></tr></thead><tbody><tr><td><code>/sm_craft_max</code></td><td>Enfileira a maior quantidade craftável agora.</td></tr></tbody></table>",
+      "css": ".ds-table { width: 100%; border-collapse: collapse; font-family: Inter, ui-sans-serif, sans-serif; } .ds-table th { background: #14121c; color: #9c9dab; font-family: 'JetBrains Mono', ui-monospace, monospace; font-weight: 600; font-size: 0.8125rem; letter-spacing: 0.01em; text-align: left; padding: 10px 12px; border-bottom: 1px solid #33313f; } .ds-table td { padding: 10px 12px; border-bottom: 1px solid #292733; color: #e3e4eb; } .ds-table code { color: #f53e39; background: color-mix(in oklch, #f53e39 12%, transparent); padding: 2px 6px; border-radius: 4px; font-size: 0.85em; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "O Painel de Redstone",
+    "overview": "A wiki inteira é um painel técnico iluminado por redstone dentro de uma câmara de obsidiana — a metáfora vem literalmente dos materiais do próprio Minecraft, não de tendência de UI. O fundo é obsidiana: quase preto, com um leve tom violeta-azulado (a cor real do bloco no jogo), organizado em camadas tonais (void → soft → raised) em vez de sombras projetadas. Em cima disso, o redstone é o único acento vivo — vermelho-alaranjado que 'acende' em links, botões e estado ativo, do jeito que o pó de redstone brilha quando energizado. Um segundo acento, cobre oxidado (verde-azulado), aparece raramente, reservado pra diferenciação semântica específica. O sistema rejeita explicitamente o SaaS corporativo (gradiente roxo-azul, hero centralizado gigante, botão em pílula) e o infantil/cartoon (emoji, mascote, tom bobo).",
+    "keyCharacteristics": [
+      "Fundo quase-preto com tom violeta de obsidiana (não preto neutro, não cinza de SaaS)",
+      "Um único acento vivo (redstone); cobre oxidado como acento raro e deliberado",
+      "Sem sombra projetada — profundidade vem de camadas tonais; brilho de redstone só quando 'energizado'",
+      "Títulos em monoespaçado (700, tracking levemente negativo); corpo em Inter, sem exceção",
+      "Botões com 6px de raio, não em pílula"
+    ],
+    "rules": [
+      { "name": "A Regra do Acento Único", "body": "Redstone é a ÚNICA cor viva que carrega significado de marca. Cobre aparece em menos de 5% de qualquer tela, nunca decorativo, nunca em par com redstone na mesma composição.", "section": "colors" },
+      { "name": "A Regra do Mesmo Mundo", "body": "Tema claro e escuro são o MESMO material sob luminosidade oposta, mesmo matiz ~293°. Nenhum neutro usa matiz amarelo/creme.", "section": "colors" },
+      { "name": "A Regra do Mono Só no Topo", "body": "Monoespaçado é reservado pra Display/Headline/Title/Label — nunca pro corpo de um parágrafo.", "section": "typography" },
+      { "name": "A Regra Sem Sombra Neutra", "body": "Nenhum box-shadow cinza/preto neutro em lugar nenhum do sistema. Ou é camada tonal, ou é o brilho de redstone.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do usar redstone como o único acento vivo — link, botão primário, estado ativo",
+      "Do manter os neutros dos dois temas no mesmo matiz (~293°)",
+      "Do usar camadas tonais pra profundidade, nunca sombra neutra",
+      "Do reservar cobre oxidado pra diferenciação semântica pontual",
+      "Do manter títulos em mono e corpo em Inter, sem exceção",
+      "Do verificar contraste ≥4.5:1 pra texto de corpo e ≥3:1 pra texto grande antes de fechar qualquer par novo"
+    ],
+    "donts": [
+      "Don't usar gradiente roxo-azul em hero nem em botão",
+      "Don't usar botão em pílula 100% arredondada",
+      "Don't usar border-left/border-right colorido como destaque decorativo",
+      "Don't usar emoji, mascote ou tom infantil em nenhum elemento de UI",
+      "Don't tingir nenhum neutro pra creme/amarelo/bege",
+      "Don't introduzir uma segunda fonte pro corpo de texto",
+      "Don't usar sombra neutra cinza/preta"
+    ]
+  }
+}

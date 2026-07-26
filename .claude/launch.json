@@ -6,6 +6,12 @@
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "docs:preview"],
       "port": 4173
+    },
+    {
+      "name": "ant-wiki-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "docs:dev"],
+      "port": 5173
     }
   ]
 }
