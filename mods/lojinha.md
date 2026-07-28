@@ -39,7 +39,7 @@ Nenhum dos dois exige operador — `/lojinha moeda` só funciona se você for do
 
 ## Configuração
 
-Arquivo `config/lojinha.json`, gerado automaticamente na primeira subida, com live-reload via configreload. Os números mais relevantes: limite de **8 lojas por jogador**, cooldown de **10 ticks (meio segundo)** entre transações da mesma pessoa (só pra evitar duplo clique disparando duas trocas), e preço mínimo (0 por padrão, o que permite loja de graça/doação). Também dá pra adicionar novas letras de moeda além do "e" (esmeralda) já configurado por padrão.
+Arquivo `config/lojinha.json`, gerado automaticamente na primeira subida, com live-reload via configreload. Os números mais relevantes: limite de **8 lojas por jogador** (contando **todas as dimensões juntas** — antes o limite valia por dimensão, então dava pra ter 8 no Overworld + 8 no Nether + 8 no End), cooldown de **10 ticks (meio segundo)** entre transações da mesma pessoa (só pra evitar duplo clique disparando duas trocas), e preço mínimo (0 por padrão, o que permite loja de graça/doação). Também dá pra adicionar novas letras de moeda além do "e" (esmeralda) já configurado por padrão.
 
 ## Dicas
 

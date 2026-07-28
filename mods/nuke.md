@@ -54,12 +54,22 @@ config):
 | `/nuke backup restore <id> <pos>` | Recria um backup retido em outro lugar. |
 | `/nuke backup delete <id>` | Apaga um backup retido. |
 
+## Terreno protegido
+
+A explosão **pula terreno reivindicado e baú com cadeado** do mod [Posse](/mods/posse) — tanto a destruição em si
+quanto a onda de calor (que chega a 50% além da borda da cratera). Ou seja: nuke não é ferramenta de grief, e uma
+base reivindicada continua de pé mesmo no meio do raio.
+
+Isso é controlado por `respeitarPosse` no config, **ligado por padrão**. Desligar faz a explosão passar por cima
+de tudo — só faça isso se todo mundo no servidor concordar, porque a nuke é um item craftável por qualquer jogador,
+não uma ferramenta de operador.
+
 ## Configuração
 Arquivo `config/nuke.json`, recarregável a quente via `configreload`. Os números que mais importam: `radius`
 (padrão 100 blocos de raio do blast), `fuseSeconds` (padrão 120s de fusível) e `waitSeconds` (padrão 28800s =
-8 horas até regenerar). Também dá pra ligar `backupBeforeRestore` (desligado por padrão) — antes de
-regenerar, guarda uma cópia do que estiver ocupando cada posição no momento, caso alguém tenha reconstruído em
-cima da cratera; recupere com `/nuke backup`.
+8 horas até regenerar), mais `respeitarPosse` (ligado — veja acima). Também dá pra ligar `backupBeforeRestore`
+(desligado por padrão) — antes de regenerar, guarda uma cópia do que estiver ocupando cada posição no momento,
+caso alguém tenha reconstruído em cima da cratera; recupere com `/nuke backup`.
 
 ## Dicas
 - Ligue `backupBeforeRestore` se o seu servidor tem gente que reconstrói em cima de crateras — sem isso, a
