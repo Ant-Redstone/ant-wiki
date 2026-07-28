@@ -61,7 +61,16 @@ Pra abrir o painel de um portal: agache e clique com o botão direito, com a mã
 - Se você gerencia esse portal, abre o painel completo.
 - Se não gerencia, só mostra uma info rápida (dono, público ou privado).
 
-No painel: lista paginada de jogadores por cabeça, clique esquerdo sobe o nível de acesso dele (sem acesso → usar → gerenciar → sem acesso de novo), clique direito remove o acesso na hora. Também dá pra alternar público/privado, renomear o portal (clique na etiqueta "Renomear portal" — abre uma placa pra você escrever o nome novo, igual à busca do Storage Manager), trocar a cor da superfície SÓ deste portal (clique no couro tingido "Cor da superfície" e escreva um hex de 6 ou 8 dígitos — vazio volta pra cor padrão do servidor) e ver quanto tempo falta pra ativação expirar (ou se é uma ligação permanente).
+No painel: lista paginada de jogadores por cabeça, clique esquerdo sobe o nível de acesso dele (sem acesso → usar → gerenciar → sem acesso de novo), clique direito remove o acesso na hora. Também dá pra alternar público/privado, renomear o portal (clique na etiqueta "Renomear portal" — abre uma placa pra você escrever o nome novo, igual à busca do Storage Manager), trocar a cor da superfície SÓ deste portal (clique no couro tingido "Cor da superfície" e escreva um hex de 6 ou 8 dígitos — vazio volta pra cor padrão do servidor), escolher a **direção da saída** (veja abaixo) e ver quanto tempo falta pra ativação expirar (ou se é uma ligação permanente).
+
+### Direção da saída
+
+Clique na **bússola "Direção da saída"** no painel pra escolher pra que lado quem chega neste portal fica virado. Clique esquerdo gira 45°, clique direito volta 45° (as 8 direções da bússola, não só as 4 cardinais — dá pra alinhar com parede diagonal), e shift+clique volta pro norte.
+
+A rotação é propriedade do portal de **destino**: quem atravessa sai virado pro lado que o dono daquele portal configurou, não pro lado que estava olhando antes. Só a inclinação (olhar pra cima/baixo) é preservada.
+
+- **Portal novo** já nasce com a direção que **você estava olhando ao consagrar** — normalmente é o que você quer, porque você monta o portal olhando pra ele.
+- **Portal criado antes desta atualização** vira **norte**, porque a direção original de quem o consagrou não foi guardada na época e não tem como recuperar. Se ficou virado pro lado errado, é só ajustar na bússola.
 
 Outra forma de dar acesso sem abrir o painel: o Selo de Permissão (veja comandos) — quem pegar o selo no inventário ganha USAR automaticamente e o selo se consome sozinho.
 
